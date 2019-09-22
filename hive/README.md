@@ -1,0 +1,1 @@
+使用mysql存储hive的元数据，当前使用的是mysql8，需要额外添加MySQL Connector到$HIVE_HOME/lib下。
