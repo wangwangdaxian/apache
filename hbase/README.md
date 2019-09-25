@@ -1,0 +1,1 @@
+HBASE lib下有Hadoop依赖包，需要与外部的Hadoop版本兼容。
