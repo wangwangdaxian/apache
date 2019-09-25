@@ -1,6 +1,5 @@
 #!/bin/zsh
 release="hadoop-2.7.7"
-PROJECT_HOME="$HOME/apache"
 HADOOP_HOME="/usr/local/$release"
 # download hadoop release
 function download() {
@@ -14,7 +13,7 @@ function download() {
 function ln_config() {
     for file in "$@"; do
         rm -f "$HADOOP_HOME/etc/hadoop/$file"
-        ln -s "$PROJECT_HOME/hadoop/etc/hadoop/$file" "$HADOOP_HOME/etc/hadoop/$file"
+        ln -s "$APACHE_HOME/hadoop/etc/hadoop/$file" "$HADOOP_HOME/etc/hadoop/$file"
     done
 }
 function ln_all() {

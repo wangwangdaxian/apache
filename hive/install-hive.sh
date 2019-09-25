@@ -1,7 +1,6 @@
 #!/bin/zsh
 release="hive-2.3.6"
 connector="mysql-connector-java-8.0.17"
-PROJECT_HOME="$HOME/apache"
 HIVE_HOME="/usr/local/$release"
 # download hive release
 function download() {
@@ -21,7 +20,7 @@ function download_connector() {
 # setup hive configuration
 function ln_config() {
     for file in "$@"; do
-        ln -s "$PROJECT_HOME/hive/conf/$file" "$HIVE_HOME/conf/$file"
+        ln -s "$APACHE_HOME/hive/conf/$file" "$HIVE_HOME/conf/$file"
     done
 }
 function ln_all() {
