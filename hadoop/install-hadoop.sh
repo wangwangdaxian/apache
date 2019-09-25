@@ -1,14 +1,14 @@
 #!/bin/zsh
-version="hadoop-2.7.7"
+release="hadoop-2.7.7"
 PROJECT_HOME="$HOME/apache"
-HADOOP_HOME="/usr/local/$version"
+HADOOP_HOME="/usr/local/$release"
 # download hadoop release
 function download() {
-    curl "http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/$version/$version.tar.gz" -o "$version.tar.gz"
-    sudo tar -zxf "$version.tar.gz" -C /usr/local
+    curl "http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/$release/$release.tar.gz" -o "$release.tar.gz"
+    sudo tar -zxf "$release.tar.gz" -C /usr/local
     sudo chown -R "$USER" "$HADOOP_HOME"
-    rm "$HADOOP_HOME/etc/hadoop/*.cmd" "$HADOOP_HOME/bin/*.cmd" "$HADOOP_HOME/sbin/*.cmd"
-    rm "$version.tar.gz"
+    rm $HADOOP_HOME/etc/hadoop/*.cmd $HADOOP_HOME/bin/*.cmd $HADOOP_HOME/sbin/*.cmd $HADOOP_HOME/sbin/start-all.sh
+    rm "$release.tar.gz"
 }
 # setup hadoop configuration
 function ln_config() {

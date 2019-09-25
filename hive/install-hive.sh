@@ -1,16 +1,16 @@
 #!/bin/zsh
-version="hive-2.3.6"
+release="hive-2.3.6"
 connector="mysql-connector-java-8.0.17"
 PROJECT_HOME="$HOME/apache"
-HIVE_HOME="/usr/local/$version"
+HIVE_HOME="/usr/local/$release"
 # download hive release
 function download() {
-    curl "https://mirrors.tuna.tsinghua.edu.cn/apache/hive/$version/apache-$version-bin.tar.gz" -o "$version.tar.gz"
-    sudo tar -zxf "$version.tar.gz" -C /usr/local
-    sudo mv /usr/local/apache-$version-bin /usr/local/$version
+    curl "https://mirrors.tuna.tsinghua.edu.cn/apache/hive/$release/apache-$release-bin.tar.gz" -o "$release.tar.gz"
+    sudo tar -zxf "$release.tar.gz" -C /usr/local
+    sudo mv /usr/local/apache-$release-bin /usr/local/$release
     sudo chown -R "$USER" "$HIVE_HOME"
     rm "$HIVE_HOME"/lib/log4j-slf4j-impl-2.6.2.jar
-    rm "$version.tar.gz"
+    rm "$release.tar.gz"
 }
 function download_connector() {
     curl "https://cdn.mysql.com//Downloads/Connector-J/$connector.tar.gz"
