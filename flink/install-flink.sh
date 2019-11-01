@@ -1,5 +1,5 @@
 #!/bin/zsh
-release="flink-1.9.0"
+release="flink-1.9.1"
 FLINK_HOME="/usr/local/$release"
 # download flink release
 function download() {
