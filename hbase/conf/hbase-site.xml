@@ -35,6 +35,6 @@
     </property>
     <property>
         <name>hbase.zookeeper.property.dataDir</name>
-        <value>/usr/local/zookeeper-3.5.5/data</value>
+        <value>/usr/local/zookeeper/data</value>
     </property>
 </configuration>
